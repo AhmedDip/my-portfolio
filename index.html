@@ -34,7 +34,7 @@
         --line: rgba(255, 255, 255, 0.09);
         --text: #edeff3;
         --text-dim: #9098ac;
-        --text-faint: #f0fbfd;
+       --text-faint: #f0fbfd;
         --get: #03fdf0;
         --info: #1b8bcc;
         --warm: #88e7ff;
@@ -113,7 +113,7 @@
       .cursor-ring {
         width: 34px;
         height: 34px;
-        border: 1px solid rgba(62, 202, 207, 0.5);
+        border: 1px solid rgba(62, 207, 142, 0.5);
         transition:
           width 0.2s,
           height 0.2s,
@@ -1180,6 +1180,108 @@
         text-decoration: underline;
       }
 
+      /* publications */
+      .publications-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .publication-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 32px;
+        transition:
+          transform 0.3s,
+          border-color 0.3s,
+          box-shadow 0.3s;
+      }
+      .publication-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--get);
+        box-shadow: 0 20px 40px -10px rgba(62, 207, 142, 0.2);
+      }
+      .pub-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+      .pub-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        background: rgba(62, 207, 142, 0.12);
+        border: 1px solid rgba(62, 207, 142, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--get);
+        font-size: 1.5rem;
+        flex-shrink: 0;
+      }
+      .pub-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .pub-type {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--text-faint);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .pub-year {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: var(--get);
+      }
+      .pub-title {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+        color: var(--text);
+        line-height: 1.4;
+      }
+      .pub-desc {
+        color: var(--text-dim);
+        font-size: 0.92rem;
+        margin-bottom: 20px;
+        line-height: 1.7;
+      }
+      .pub-tags {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+      .pub-tag {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        background: rgba(62, 207, 142, 0.1);
+        color: var(--get);
+        border: 1px solid rgba(62, 207, 142, 0.3);
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-transform: capitalize;
+      }
+      .pub-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--get);
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition: all 0.2s;
+      }
+      .pub-link:hover {
+        gap: 12px;
+      }
+
       /* certifications */
       .cert-grid {
         display: grid;
@@ -1428,6 +1530,7 @@
           <li><a href="#skills" class="magnetic">Skills</a></li>
           <li><a href="#experience" class="magnetic">Experience</a></li>
           <li><a href="#projects" class="magnetic">Projects</a></li>
+          <li><a href="#publications" class="magnetic">Publications</a></li>
           <li><a href="#certifications" class="magnetic">Certifications</a></li>
           <li><a href="#contact" class="magnetic btn-nav-cta">Contact</a></li>
         </ul>
@@ -1549,8 +1652,8 @@
                 Assalamu Alaikum — I'm Dip, a Software Engineer based in Dhaka,
                 Bangladesh. I build scalable backend applications using
                 <strong
-                  >PHP, Laravel, MySQL, PostgreSQL, JavaScript, Vue.js, RESTful APIs And
-                  Docker</strong
+                  >PHP, Laravel, MySQL, PostgreSQL, JavaScript, Vue.js, RESTful
+                  APIs And Docker</strong
                 >, with a focus on clean architecture, performance, and
                 maintainable code.
               </p>
@@ -1694,7 +1797,7 @@
             <span class="stack-chip"
               ><i class="fa-solid fa-database"></i> MySQL</span
             >
-             <span class="stack-chip"
+            <span class="stack-chip"
               ><i class="fa-solid fa-database"></i> PostgreSQL</span
             >
             <span class="stack-chip"
@@ -1719,7 +1822,8 @@
               ><i class="fa-brands fa-git-alt"></i> Git</span
             >
             <span class="stack-chip"
-              ><i class="fa-solid fa-server"></i> Server Maintenance</span>
+              ><i class="fa-solid fa-server"></i> Server Maintenance</span
+            >
             >
           </div>
         </div>
@@ -1750,7 +1854,7 @@
                         "
                       />
                     </div>
-                    <h3>Software Engineer </h3>
+                    <h3>Software Engineer</h3>
                   </div>
                   <span class="tl-date">June 2026 — Present</span>
                 </div>
@@ -2425,7 +2529,7 @@
 
       <section id="presentations" class="section">
         <div class="container">
-          <p class="section-eyebrow reveal-up">06 — Presentations</p>
+          <p class="section-eyebrow reveal-up">08 — Presentations</p>
           <h2 class="section-title reveal-up">
             Speaking &amp; sharing knowledge.
           </h2>
@@ -2458,16 +2562,63 @@
         </div>
       </section>
 
+      <section id="publications" class="section">
+        <div class="container">
+          <p class="section-eyebrow reveal-up">07 — Publications</p>
+          <h2 class="section-title reveal-up">Published research & works.</h2>
+
+          <div class="publications-grid">
+            <article class="publication-card reveal-up">
+              <div class="pub-header">
+                <div class="pub-icon">
+                  <i class="fa-solid fa-book"></i>
+                </div>
+                <div class="pub-meta">
+                  <h3 class="pub-title" style="align-items: center">
+                    Sentiment Analysis of Covid-19 Tweets Using Machine Learning
+                    Algorithm
+                  </h3>
+                </div>
+              </div>
+
+              <p class="pub-desc">
+                A comprehensive study on analyzing sentiment in COVID-19 related
+                tweets using advanced machine learning algorithms. This work
+                explores natural language processing techniques and
+                classification methods to understand public sentiment during the
+                pandemic.
+              </p>
+              <div class="pub-tags">
+                <span class="pub-tag">Machine Learning</span>
+                <span class="pub-tag">NLP</span>
+                <span class="pub-tag">Data Analysis</span>
+                <span class="pub-tag">COVID-19</span>
+                <span class="pub-tag">Research</span>
+                <span class="pub-tag">Sentiment Analysis</span>
+              </div>
+              <a
+                href="https://www.amazon.com/Sentiment-Analysis-Covid-19-Learning-Algorithm/dp/6208118107"
+                target="_blank"
+                class="pub-link magnetic"
+              >
+                View
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="section">
         <div class="container">
           <div class="contact-panel glass-panel reveal-up">
             <div class="contact-left">
-              <p class="section-eyebrow">07 — Contact</p>
+              <p class="section-eyebrow">09 — Contact</p>
               <h2 class="section-title">Let's build something reliable.</h2>
               <p class="contact-desc">
-                I'm currently open to new collaborations. If
-                you have a project or idea in mind, feel free to reach out. I
-                look forward to connecting with you!
+                I'm currently open to new collaborations. If you have a project
+                or idea in mind, feel free to reach out. I look forward to
+                connecting with you!
               </p>
               <div class="contact-detail">
                 <i class="fa-solid fa-envelope"></i
