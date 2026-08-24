@@ -34,10 +34,10 @@
         --line: rgba(255, 255, 255, 0.09);
         --text: #edeff3;
         --text-dim: #9098ac;
-        --text-faint: #565e70;
-        --get: #3ecf8e;
-        --info: #6c9bff;
-        --warm: #f2a93b;
+        --text-faint: #f0fbfd;
+        --get: #03fdf0;
+        --info: #1b8bcc;
+        --warm: #88e7ff;
         --font-display: "Space Grotesk", sans-serif;
         --font-body: "Inter", sans-serif;
         --font-mono: "JetBrains Mono", monospace;
@@ -113,7 +113,7 @@
       .cursor-ring {
         width: 34px;
         height: 34px;
-        border: 1px solid rgba(62, 207, 142, 0.5);
+        border: 1px solid rgba(62, 202, 207, 0.5);
         transition:
           width 0.2s,
           height 0.2s,
@@ -967,11 +967,11 @@
         font-size: 1.1rem;
       }
       .org-badge {
-        width: 44px;
-        height: 44px;
-        border-radius: 10px;
+        width: 70px;
+        height: 70px;
+        border-radius: 14px;
         flex-shrink: 0;
-        border: 1px solid var(--line);
+        border: 1.5px solid var(--line);
         background: var(--surface-strong);
         display: flex;
         align-items: center;
@@ -982,12 +982,12 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
-        padding: 6px;
+        padding: 8px;
       }
       .org-badge .badge-fallback {
         font-family: var(--font-display);
         font-weight: 700;
-        font-size: 0.8rem;
+        font-size: 0.95rem;
         color: var(--get);
       }
       .tl-date {
@@ -1057,6 +1057,30 @@
         align-items: center;
         gap: 12px;
         margin-bottom: 12px;
+      }
+      .edu-badge {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        flex-shrink: 0;
+        border: 1.5px solid var(--line);
+        background: var(--surface-strong);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .edu-badge img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 6px;
+      }
+      .edu-badge .badge-fallback {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: var(--get);
       }
       .edu-card h4 {
         font-family: var(--font-display);
@@ -1695,7 +1719,7 @@
               ><i class="fa-brands fa-git-alt"></i> Git</span
             >
             <span class="stack-chip"
-              ><i class="fa-solid fa-server"></i> Server Maintenance</span
+              ><i class="fa-solid fa-server"></i> Server Maintenance</span>
             >
           </div>
         </div>
@@ -1921,7 +1945,7 @@
             <div class="edu-grid">
               <div class="edu-card glass-panel">
                 <div class="edu-heading">
-                  <div class="org-badge">
+                  <div class="edu-badge">
                     <img
                       src="assets/logos/aiub.png"
                       alt="AIUB logo"
@@ -1942,7 +1966,7 @@
               </div>
               <div class="edu-card glass-panel">
                 <div class="edu-heading">
-                  <div class="org-badge">
+                  <div class="edu-badge">
                     <img
                       src="assets/logos/syed-hatem-ali-college.png"
                       alt="Government Syed Hatem Ali College logo"
@@ -1963,7 +1987,7 @@
               </div>
               <div class="edu-card glass-panel">
                 <div class="edu-heading">
-                  <div class="org-badge">
+                  <div class="edu-badge">
                     <img
                       src="assets/logos/barisal-zilla-school.png"
                       alt="Barisal Zilla School logo"
@@ -2409,7 +2433,8 @@
             <div class="video-frame">
               <iframe
                 src="https://www.youtube.com/embed/yCjN2EHx4Mk"
-               
+                title="Presentation 1"
+                loading="lazy"
                 allowfullscreen
               ></iframe>
             </div>
